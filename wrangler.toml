@@ -1,0 +1,40 @@
+name = "ruralbusiness-advisor"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Interfaz Web servida mediante Assets
+assets = { directory = "./public", binding = "ASSETS", not_found_handling = "single-page-application" }
+
+# Inferencia de Inteligencia Artificial (Workers AI)
+[ai]
+binding = "AI"
+
+# Navegador en la nube (Cloudflare Browser Rendering para scraping /crawl)
+[browser]
+binding = "MYBROWSER"
+
+# Base de datos relacional D1
+[[d1_databases]]
+binding = "DB"
+database_name = "ruralbusiness-advisor-db"
+database_id = "f65d7c3b-3288-4953-bd8a-9e0fcc0a2fcd"
+
+# Almacén de objetos R2 (JSON de convocatorias e informes)
+[[r2_buckets]]
+binding = "R2_STORAGE"
+bucket_name = "ruralbusiness-advisor-storage"
+
+# Almacén clave-valor KV (caché corta de APIs)
+[[kv_namespaces]]
+binding = "RURALBUSINESS_KV"
+id = "00d3d89833ef4e36bfb1495e87fc9b65"
+
+# Variables de entorno y catálogo de modelos configurables
+[vars]
+ENVIRONMENT = "production"
+DEFAULT_TERRITORY = "Castilla y León / Burgos"
+MODEL_MAIN = "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+MODEL_REASONING = "@cf/deepseek-ai/deepseek-r1-distill-qwen-32b"
+MODEL_TRANSLATION = "@cf/meta/m2m100-1.2b"
+MODEL_SUMMARY = "@cf/meta/llama-3.2-3b-instruct"

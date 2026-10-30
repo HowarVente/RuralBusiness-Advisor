@@ -1,0 +1,16 @@
+# Secretos esperados para RuralBusiness Advisor
+# Copia este archivo a .dev.vars para desarrollo local (nunca hagas commit de .dev.vars)
+
+# Obligatorio para proteger endpoints /mcp y /api
+MCP_AUTH_TOKEN=tu_token_secreto_aqui
+
+# Token para acceso a la interfaz web (opcional si usas Cloudflare Access)
+UI_ACCESS_TOKEN=tu_token_interfaz_aqui
+
+# APIs de Inteligencia Externa (Opcionales: si no están definidos, la herramienta se desactiva limpiamente)
+EXA_API_KEY=
+PERPLEXITY_API_KEY=
+APITUBE_API_KEY=
+PATSNAP_API_KEY=
+APIFY_TOKEN=
+FAOSTAT_TOKEN=

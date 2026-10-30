@@ -1,0 +1,32 @@
+{
+  "name": "ruralbusiness-advisor",
+  "version": "1.0.0",
+  "description": "Agente estratega de modelos de negocio y financiación rural en Cloudflare Workers AI",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "build": "tsc --noEmit",
+    "test": "node --test test/**/*.test.js"
+  },
+  "keywords": [
+    "cloudflare-workers",
+    "workers-ai",
+    "rural-development",
+    "agtech",
+    "mcp",
+    "business-model"
+  ],
+  "author": "RuralBusiness Advisor Team",
+  "license": "MIT",
+  "dependencies": {
+    "@hono/zod-validator": "^0.4.3",
+    "hono": "^4.7.2",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261028.1",
+    "typescript": "^5.7.3",
+    "wrangler": "^4.154.0"
+  }
+}
